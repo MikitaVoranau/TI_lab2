@@ -1,0 +1,76 @@
+﻿<Window x:Class="TI_lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Шифровщик Теории Информации" Height="800" Width="1200" Background="White">
+    <Grid Margin="10">
+        <!-- Определение двух колонок: левая для управления, правая для отображения текста -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Левая панель управления с пастельным фоном -->
+        <StackPanel Grid.Column="0" Margin="10" Background="#F0F4F8" Width="280">
+            <Label Content="Начальное состояние (29 бит):" FontFamily="Arial" FontSize="16" Margin="5"/>
+            <TextBox Name="tbxRegister" TextChanged="tbxRegister_TextChanged" 
+                     TextWrapping="Wrap" Width="260" Height="30" FontFamily="Arial" FontSize="16" Margin="5"/>
+            <Label Content="Длина регистра:" FontFamily="Arial" FontSize="16" Margin="5"/>
+            <TextBox Name="tbxLength" IsReadOnly="True" TextWrapping="Wrap" 
+                     Width="260" Height="30" FontFamily="Arial" FontSize="16" Margin="5"/>
+            <Button Name="btnOpenFile" Content="Открыть файл" Click="OpenFileButton_Click" 
+                    Width="260" Height="35" FontFamily="Arial" FontSize="16" Margin="5" Background="#D9EFFF"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Button Name="btnEncrypt" Content="Зашифровать" Click="EncryptButton_Click" 
+                        Width="120" Height="35" FontFamily="Arial" FontSize="16" Margin="5" Background="#D9EFFF"/>
+                <Button Name="btnDecrypt" Content="Дешифровать" Click="DecryptButton_Click" 
+                        Width="120" Height="35" FontFamily="Arial" FontSize="16" Margin="5" Background="#D9EFFF"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <!-- Правая панель для отображения ключа и текстовых данных -->
+        <Grid Grid.Column="1" Margin="10">
+            <!-- Определение строк: ключ, исходный и итоговый текст -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>  <!-- Заголовок для ключа -->
+                <RowDefinition Height="Auto"/>  <!-- Поле для ключа -->
+                <RowDefinition Height="Auto"/>  <!-- Заголовок исходного текста -->
+                <RowDefinition Height="Auto"/>  <!-- Поле исходного текста -->
+                <RowDefinition Height="Auto"/>  <!-- Заголовок итогового текста -->
+                <RowDefinition Height="*"/>     <!-- Поле итогового текста (растягивается) -->
+            </Grid.RowDefinitions>
+            
+            <!-- Ключ -->
+            <Label Content="Ключ:" FontFamily="Arial" FontSize="16" Margin="5" Grid.Row="0"/>
+            <RichTextBox Name="rtbKeyText" IsReadOnly="True" Background="#FFF8F0" 
+                         FontFamily="Arial" FontSize="16" Margin="5" Grid.Row="1" Height="100">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            
+            <!-- Исходный текст -->
+            <Label Content="Исходный текст:" FontFamily="Arial" FontSize="16" Margin="5" Grid.Row="2"/>
+            <RichTextBox Name="rtbOpenText" IsReadOnly="True" Background="#FFF8F0" 
+                         FontFamily="Arial" FontSize="16" Margin="5" Grid.Row="3" Height="200">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            
+            <!-- Итоговый текст -->
+            <Label Content="Итоговый текст:" FontFamily="Arial" FontSize="16" Margin="5" Grid.Row="4"/>
+            <RichTextBox Name="rtbCipherText" IsReadOnly="True" Background="#FFF8F0" 
+                         FontFamily="Arial" FontSize="16" Margin="5" Grid.Row="5">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+    </Grid>
+</Window>
