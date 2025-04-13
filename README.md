@@ -1,7 +1,7 @@
 Для того чтобы, скачать данную работу можете прописать в терминале в своей директории, данную инструкцию.\
-git clone https://github.com/MikitaVoranau/TI_lab2.git \
+git clone https://github.com/MikitaVoranau/TI_lab2.git 
 
 Либо же можно скачать zip-файл и извлечь его к себе в директорию.
 
 Исполняемый файл хранится по пути 
-TI_lab2/tree/main/TI2/bin/Release/net8.0-windows/win-x64
+TI2/bin/Release/net8.0-windows/win-x64
