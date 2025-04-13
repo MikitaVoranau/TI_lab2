@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gTNUG6YQdC0=",
+  "dgSpecHash": "Hizh8Mz9bTI=",
   "success": true,
   "projectFilePath": "C:\\Users\\minat\\RiderProjects\\TI2\\TI2\\TI2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\minat\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.7\\microsoft.netcore.app.runtime.win-x64.8.0.7.nupkg.sha512",
-    "C:\\Users\\minat\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.7.nupkg.sha512",
-    "C:\\Users\\minat\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.7\\microsoft.aspnetcore.app.runtime.win-x64.8.0.7.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
